@@ -107,6 +107,7 @@ Original code 2006 June 05 by relicoder.
 */
 
 //#include "config.h"
+#include <inttypes.h>
 
 #define COMPILE_SQLITE_EXTENSIONS_AS_LOADABLE_MODULE 1
 #define HAVE_ACOSH 1
@@ -1968,6 +1969,6 @@ int double_cmp(const void *a, const void *b){
 
 void print_elem(void *e, int64_t c, void* p){
   int ee = *(int*)(e);
-  printf("%d => %lld\n", ee,c);
+  printf("%d => %" PRId64 "\n", ee, c);
 }
 
